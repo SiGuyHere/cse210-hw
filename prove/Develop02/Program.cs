@@ -15,8 +15,8 @@ class Program
                 string prompt = Prompt.RandomPrompt();
                 Console.WriteLine($"{prompt}\n>");
                 string userInput = Console.ReadLine();
-                string entry = Entry.CreateEntry(userInput, prompt);
-                Journal.AddEntry(entry);
+                Entry.CreateEntry(userInput, prompt);
+                Journal.AddEntry(Entry.entry);
 
             } else if (userChoice == "2"){
                 Journal.DisplayEntries();
