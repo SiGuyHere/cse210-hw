@@ -27,14 +27,14 @@ class Scripture
         {
             end = false;
             int randomWord = random.Next(wordText.Count);
-            if (!wordText[randomWord].Hidden)
+            if (!wordText[randomWord]._hidden)
             {
                 wordText[randomWord].Hide();
                 c = c + 1;
             }
             for (int i = 0; i < wordText.Count(); i++)
             {
-                if (!wordText[i].Hidden)
+                if (!wordText[i]._hidden)
                 {
                     end = true;
                 }
@@ -55,14 +55,14 @@ class Scripture
         {
             bool end = false;
             int randomWord = random.Next(wordText.Count);
-            if (wordText[randomWord].Hidden)
+            if (wordText[randomWord]._hidden)
             {
                 wordText[randomWord].Show(cleanWordText[randomWord]);
                 c = c + 1;
             }
             for (int i = 0; i < wordText.Count(); i++)
             {
-                if (wordText[i].Hidden)
+                if (wordText[i]._hidden)
                 {
                     end = true;
                 }
@@ -78,7 +78,7 @@ class Scripture
         List<string> finalText = new List<string>();
         for (int i = 0; i < wordText.Count(); i++)
         {
-            finalText.Add(wordText[i].WordText);
+            finalText.Add(wordText[i]._wordText);
         }
         string result = string.Join(" ", finalText);
         Console.WriteLine($"\n{result}");

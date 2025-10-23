@@ -3,33 +3,33 @@ using System.ComponentModel.DataAnnotations;
 
 class Reference
 {
-    private string Book;
-    private string Chapter;
-    private int StartVerse;
-    private int EndVerse;
+    private string _book;
+    private string _chapter;
+    private int _startVerse;
+    private int _endVerse;
 
     public Reference(string book, string chapter, int verse)
     {
-        Book = book;
-        Chapter = chapter;
-        StartVerse = verse;
+        _book = book;
+        _chapter = chapter;
+        _startVerse = verse;
     }
     public Reference(string book, string chapter, int startVerse, int endVerse)
     {
-        Book = book;
-        Chapter = chapter;
-        StartVerse = startVerse;
-        EndVerse = endVerse;
+        _book = book;
+        _chapter = chapter;
+        _startVerse = startVerse;
+        _endVerse = endVerse;
     }
     public void Display()
     {
-        if (EndVerse == 0)
+        if (_endVerse == 0)
         {
-            Console.WriteLine($"{Book} Chapter {Chapter} Verse {StartVerse}");
+            Console.WriteLine($"{_book} Chapter {_chapter} Verse {_startVerse}");
         }
         else
         {
-            Console.WriteLine($"{Book} Chapter {Chapter} Verses {StartVerse}-{EndVerse}");
+            Console.WriteLine($"{_book} Chapter {_chapter} Verses {_startVerse}-{_endVerse}");
         }
         
     }
