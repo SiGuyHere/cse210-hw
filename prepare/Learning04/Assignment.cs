@@ -1,6 +1,6 @@
 class Assignment
 {
-    protected string _studentName;
+    private string _studentName;
     private string _topic;
 
     public Assignment(string name, string topic)
@@ -11,5 +11,9 @@ class Assignment
     public string GetSummary()
     {
         return $"{_studentName}-{_topic}";
+    }
+    protected string GetName()
+    {
+        return _studentName;
     }
 }
